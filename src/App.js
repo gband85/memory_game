@@ -1,24 +1,17 @@
 import logo from './logo.svg';
+import am_red_squirrel from './Tamiasciurus_hudsonicus_CT.jpg';
+import black_squirrel from './Black_squirrel_in_Santa_Clara_CA.jpg'
+import eastern_gray_squirrel from './EasternGraySquirrel_GAm.jpg'
 import './App.css';
+import Card from './Card';
 
-function App() {
+const App=()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+<Card src={am_red_squirrel}/>
+<Card src={black_squirrel}/>
+<Card/>
+</div>
   );
 }
 
