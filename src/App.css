@@ -12,7 +12,45 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.card {
+  position: relative;
+}
+.cards {
+  display: flex;
+max-width: 1300px;
+flex-wrap: wrap;
+gap: 10px;
+}
+.card img {
+  max-width: 300px;
+  height: auto;
+  border: 2px red solid;
+  pointer-events: none;
+}
+.card div {
+  position: absolute;
+  top: 196.8px;
+  display: flex;
+  flex-direction: column;
+  /* right: 120px; */
+  color: white;
+  text-align: center;
+  background-color: black;
+  left:  1px;
+pointer-events: none;
+  width: calc(100% - 4px);
+}
+/* .card h3:last-child {
+  position: absolute;
+  top: 100px;
+  right: 120px;
+  color: white;
+  text-align: center;
+  background-color: black;
+  left:  1px;
 
+  width: calc(100% - 4px);
+} */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
