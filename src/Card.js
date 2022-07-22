@@ -1,5 +1,3 @@
-import React, {useState, createRef} from "react";
-
 const Card=(props)=>{
     const handleClick=()=>{
         if (props.clicked===false) {
@@ -16,8 +14,8 @@ return (
     
         <img src={props.src} alt="" height={750} width={600}></img>
         <div>
-        <p>{props.common_name}</p>
-        <p>{props.sci_name}</p>
+        <p className="common">{props.common_name}</p>
+        <p className="scientific">{props.sci_name}</p>
         </div>
     </div>
 )
