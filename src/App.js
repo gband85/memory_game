@@ -24,7 +24,7 @@ const App = () => {
     require.context("./images", false, /\.(png|jpe?g|svg)$/)
   );
   const [cardList, setCardList]=useState(cards);
-  console.log(cardList);
+  // console.log(cardList);
   const [score, setScore] = useState(0);
   const resetGame = () => {
     setScore(0);
@@ -44,16 +44,26 @@ if (id===card.id) {
 }
 return card;
     })
-    setCardList(newCardList);
+    shuffleCards(newCardList);
+    //setCardList(newCardList);
   };
   const updateScore = () => {
     setScore(score + 1);
   };
+  const shuffleCards=()=>{
+    const shuffledList=cardList
+    
+    .map(value=>({value,sort: Math.random()}))
+    
+    .sort((a,b)=>a.sort-b.sort)
+    .map(({value})=>value);
+    setCardList(shuffledList);
+  }
   // if ()
   return (
     // <Game score={0} clicked={false}/>
-    <div>
-      <div>
+    <div className="container">
+      <div className="score">
         <p>Score: {score}</p>
       </div>
       <div className="cards">
